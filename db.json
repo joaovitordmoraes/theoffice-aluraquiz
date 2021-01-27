@@ -34,6 +34,7 @@
         "primary": "#111115",
         "secondary": "#393533",
         "button": "#8ab0b1",
+        "buttonDisabled": "#706d6c",
         "buttonHover": "#527575",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
