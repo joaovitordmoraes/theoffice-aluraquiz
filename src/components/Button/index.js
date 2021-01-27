@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.button};
@@ -14,11 +14,21 @@ const Button = styled.button`
     cursor: pointer;
     transition: all 250ms linear;
 
+    &:disabled {
+        background-color: ${({ theme }) => theme.colors.buttonDisabled};
+        cursor: not-allowed;
+
+        &:hover,
+        &:focus {
+            background-color: ${({ theme }) => theme.colors.buttonDisabled};
+        }
+    }
+
     &:hover,
     &:focus {
         background-color: ${({ backgroundColor }) => backgroundColor};
         transition: all 250ms linear;
     }
-`
+`;
 
-export default Button
+export default Button;

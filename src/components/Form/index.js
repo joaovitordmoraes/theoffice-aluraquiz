@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Form = styled.form``
+const Form = styled.form``;
 
 Form.Field = styled.input`
     background-color: ${({ theme }) => theme.colors.secondary};
@@ -10,7 +10,8 @@ Form.Field = styled.input`
     padding: 7px 15px;
     margin-bottom: 25px;
     width: 100%;
+    min-height: 40px;
     outline: none;
-`
+`;
 
-export default Form
+export default Form;
