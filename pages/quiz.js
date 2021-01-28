@@ -38,19 +38,17 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit }) {
       </Widget.Header>
 
       <img
-        src="https://placehold.it/400x400"
+        src={question.image}
         alt="Descrição da imagem aqui"
         style={{
           width: '100%',
-          height: '150px',
+          height: '190px',
           objectFit: 'cover',
         }}
       />
 
       <Widget.Content>
         <h2>{question.title}</h2>
-
-        <p>{question.description}</p>
 
         <form onSubmit={(event) => {
           event.preventDefault();
