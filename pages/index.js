@@ -6,7 +6,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
-import Form from '../src/components/Form';
+import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GithubCorner from '../src/components/GithubCorner';
@@ -29,22 +29,25 @@ export default function Home() {
           <Widget.Content>
             <p>{db.description}</p>
 
-            <Form onSubmit={function (event) {
+            <form onSubmit={(event) => {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
-            }}>
-              <Form.Field
+            }}
+            >
+              <Input
                 type="text"
                 placeholder="Diz aí seu nome pra jogar :)"
-                onChange={function (event) {
-                  setName(event.target.value)
+                name="nome"
+                value={name}
+                onChange={(event) => {
+                  setName(event.target.value);
                 }}
               />
 
               <Button backgroundColor={db.theme.colors.buttonHover} disabled={name.length === 0}>
-                Jogar {name}
+                {`Jogar ${name}`}
               </Button>
-            </Form>
+            </form>
           </Widget.Content>
         </Widget>
 
@@ -52,7 +55,7 @@ export default function Home() {
           <Widget.Content>
             <h2>Quizes da galera</h2>
 
-            <p>Dá uma olhada nesses quizes incríveis que o pessoal da Imersão React - Next.JS fez:</p>
+            <p>Dá uma olhada nesses quizes incríveis que o pessoal da Imersão React fez:</p>
           </Widget.Content>
         </Widget>
 
