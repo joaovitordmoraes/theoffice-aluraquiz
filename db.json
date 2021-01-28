@@ -4,25 +4,75 @@
     "description": "Teste os seus conhecimentos sobre a série",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://media.giphy.com/media/jxXt4wsPu4dyM/source.gif",
+        "title": "Quem era o noivo de Pam nas primeiras temporadas?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 3,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Daryl",
+          "Andy",
+          "Oscar",
+          "Nenhuma das anternativas"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://media.giphy.com/media/vgUFOWBwBkziE/source.gif",
+        "title": "Qual a melhor pizza segundo os funcionários de Dunder Mifflin?",
+        "description": "Essa é pra aquecer",
+        "answer": 1,
+        "alternatives": [
+          "Mamma Maglione",
+          "Alfredo's Pizza Cafe",
+          "Pizza Hut",
+          "Pizza by Alfredo"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/4BQ4bVkF0HZ8k/source.gif",
+        "title": "Em sua fazenda Dwight tem uma plantação de:",
+        "description": "Essa é pra aquecer",
+        "answer": 3,
+        "alternatives": [
+          "Cebola",
+          "Tomate",
+          "Maçã",
+          "Beterraba"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/l0ExqT8Z6MOQyoC8o/giphy.gif",
+        "title": "Em que local Jim pede Pam em casamento?",
+        "description": "Essa é pra aquecer",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Posto de gasolina",
+          "Restaurante",
+          "Estacionamento da Dunder Mifflin",
+          "Nenhuma das anteriores"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/l4FGrKJYpKuxtufHq/source.gif",
+        "title": "Qual o nome da loja de velas da Jan?",
+        "description": "Essa é pra aquecer",
+        "answer": 1,
+        "alternatives": [
+          "The Hunted",
+          "Serenity by Jan",
+          "Candle shop by Jan",
+          "Nenhum das alternativas"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/12MgUpnxEq3ypy/source.gif",
+        "title": "Qual o nome do mordomo robô de Michael Scarn em 'Threat Level Midnight'?",
+        "description": "Essa é pra aquecer",
+        "answer": 0,
+        "alternatives": [
+          "Samuel L. Chang",
+          "Samuel L. Jackson",
+          "Samuel Rosa",
+          "Nenhuma das alternativas"
         ]
       }
     ],
