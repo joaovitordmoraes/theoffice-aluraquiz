@@ -2,6 +2,7 @@
 /* eslint-disable react/require-default-props */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 
 import QuizBackground from '../src/components/QuizBackground';
@@ -14,6 +15,9 @@ import Footer from '../src/components/Footer';
 import GithubCorner from '../src/components/GithubCorner';
 
 function ResultScreen({ results }) {
+  const router = useRouter();
+  const { name } = router.query;
+
   return (
     <Widget>
       <Widget.Header>
@@ -22,7 +26,11 @@ function ResultScreen({ results }) {
 
       <Widget.Content>
         <p>
-          Você acertou
+          Parabéns
+          {' '}
+          {name}
+          {' '}
+          , você acertou
           {' '}
           {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
