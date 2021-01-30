@@ -3,16 +3,17 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import db from '../db.json';
+import db from '../../db.json';
 
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import AlternativeForm from '../src/components/AlternativeForm';
-import Widget from '../src/components/Widget';
-import Button from '../src/components/Button';
-import Footer from '../src/components/Footer';
-import GithubCorner from '../src/components/GithubCorner';
+import QuizBackground from '../../src/components/QuizBackground';
+import QuizContainer from '../../src/components/QuizContainer';
+import QuizLogo from '../../src/components/QuizLogo';
+import AlternativeForm from '../../src/components/AlternativeForm';
+import Widget from '../../src/components/Widget';
+import BackLinkArrow from '../../src/components/BackLinkArrow';
+import Button from '../../src/components/Button';
+import Footer from '../../src/components/Footer';
+import GithubCorner from '../../src/components/GithubCorner';
 
 function ResultScreen({ results }) {
   const router = useRouter();
@@ -42,8 +43,9 @@ function ResultScreen({ results }) {
             return somatoriaAtual;
           }, 0)}
           {' '}
-          perguntas, parabéns!
+          perguntas!
         </p>
+
         <ul>
           {results.map((result, index) => (
             <li key={`result__${result}`}>
@@ -65,12 +67,18 @@ function LoadingScreen() {
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        Carregando Quiz...
       </Widget.Header>
 
-      <Widget.Content>
-        [Desafio do Loading]
-      </Widget.Content>
+      <img
+        src="https://media.giphy.com/media/PsrXGq6OyLjIA/source.gif"
+        alt="Descrição da imagem aqui"
+        style={{
+          width: '100%',
+          height: '190px',
+          objectFit: 'cover',
+        }}
+      />
     </Widget>
   );
 }
@@ -91,6 +99,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -179,7 +188,7 @@ export default function QuizPage() {
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 1 * 5000);
   }, []);
 
   function handleSubmit() {
@@ -226,4 +235,9 @@ QuestionWidget.propTypes = {
   questionIndex: PropTypes.number,
   onSubmit: PropTypes.func,
   addResult: PropTypes.func,
+};
+
+ResultScreen.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  results: PropTypes.array,
 };
